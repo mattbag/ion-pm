@@ -1,0 +1,40 @@
+search-lg {
+    height: $search-lg-height;
+    // padding: $search-lg-pad;
+    // background-color: $search-lg-bg;
+    // top: 0;
+    // right: 0;
+    // position: fixed;
+    // left: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    // .searchbar-input{
+        // background-color: transparent !important;
+        // color: white !important;
+        // text-align: right;
+    // }
+    .item-block .item-inner{
+border: none !important;
+    }
+    .searchbar-search-icon{
+        // background-color: transparent !important;
+        color: white !important;
+    }
+    .grid{
+        padding-top:0;
+        padding-bottom:0;
+    }
+    .col{
+        padding-top:0;
+        padding-bottom:0;
+        .searchbar{
+            padding-top:0;
+            padding-bottom:0;
+            &-md, &-ios, &-wp{
+                padding-top:0;
+                padding-bottom:0;
+            }
+        }
+    }
+}

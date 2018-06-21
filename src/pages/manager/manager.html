@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Manager</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-grid>
+  <h2><ion-icon color="secondary" name="md-add-circle" (click)="create()"></ion-icon>  Sections</h2>
+
+    <ion-row *ngFor="let s of sections | async">
+      <ion-col col-auto>
+        <ion-icon (click)="editSection(s)" name="build" color="primary"></ion-icon>
+        <ion-icon (click)="removeSection(s)" name="trash" color="danger"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <h3> {{s.label}}</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr>
+  <ion-grid>
+  <h2><ion-icon color="secondary" name="md-add-circle" (click)="create()"></ion-icon>  Tasks</h2>
+    <ion-row *ngFor="let t of tasks | async">
+      <ion-col col-auto>
+        <ion-icon (click)="editTask(t)" name="build" color="primary"></ion-icon>
+        <ion-icon (click)="removeTask(t)" name="trash" color="danger"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <h3> {{t.label}}</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <hr>
+  <ion-grid>
+  <h2><ion-icon color="secondary" name="md-add-circle" (click)="create()"></ion-icon>  Users</h2>
+    <ion-row *ngFor="let u of users | async">
+      <ion-col col-auto>
+        <ion-icon (click)="editTask(u)" name="build" color="primary"></ion-icon>
+        <ion-icon (click)="removeTask(u)" name="trash" color="danger"></ion-icon>
+      </ion-col>
+      <ion-col>
+        <h3> {{u.name}} - <a href="{{'mailto:' + u.email}}">{{u.email}}</a></h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

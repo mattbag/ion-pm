@@ -1,0 +1,128 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+$colors: (
+  primary:    #090a3c,
+  secondary:  #6cccde,
+  danger:     #ed145a,
+  accent:     #ffcb08,
+  light:      #fff,
+  dark:       #000,
+  brown:    #594c48,
+      grey: gray
+);
+
+$grid-breakpoints:
+	( xs: 0, sm: 576px, md: 768px, lg: 1200px, xl: 1700px );
+
+$grid-padding-width: 10px !default;
+  $grid-padding-widths: (
+  xs: $grid-padding-width,
+  sm: $grid-padding-width,
+  md: $grid-padding-width * 2,
+  lg: $grid-padding-width * 3,
+  xl: $grid-padding-width * 3
+) !default;
+
+$list-md-background-color: transparent;
+$list-ios-background-color: $list-md-background-color;
+$list-wp-background-color: $list-md-background-color;
+
+$split-pane-side-max-width: 300px;
+$footer-height:50px;
+$header-lg-height: 80px;
+$header-lg-bg: #333;
+$header-lg-pad: 15px;
+
+$search-lg-height: 50px;
+$search-lg-bg: #000;
+$search-lg-pad: 15px;
+
+$searchbar-md-input-box-shadow: none;
+$searchbar-ios-input-box-shadow: $searchbar-md-input-box-shadow;
+$searchbar-wp-input-box-shadow: $searchbar-md-input-box-shadow;
+
+$card-ios-box-shadow:0 1px 1px rgba(0, 0, 0, .2);
+$card-md-box-shadow:0 1px 1px rgba(0, 0, 0, .2);
+$card-wp-box-shadow:0 1px 1px rgba(0, 0, 0, .2);
+$card-md-header-font-size: 2rem ;
+$card-ios-font-size: $card-md-header-font-size;
+$card-wp-font-size: $card-md-header-font-size;
+$card-ios-header-color: color($colors, primary);
+$card-wp-header-color: color($colors, primary);
+$card-md-header-color: color($colors, primary);
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";

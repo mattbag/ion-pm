@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Create Project</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only clear (click)="dismiss()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label color="primary" floating>Project Name</ion-label>
+      <ion-input [(ngModel)]="project_name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>Launch Date</ion-label>
+        <!--<ion-input [(ngModel)]="project_date"></ion-input>-->
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="project_date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" floating>Sections</ion-label>
+      <ion-select [(ngModel)]="project_sections" multiple="true">
+        <ion-option [value]="section.$key" *ngFor="let section of section_list | async">{{section.label}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item></ion-item>
+  </ion-list>
+
+  <button ion-button full (click)="addProject()" [disabled]="!project_sections || !project_name">Create</button>
+</ion-content>

@@ -1,0 +1,100 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+h1,h2,h3,h4,h5,h6{
+    color:map-get($colors , primary );
+}
+.content hr{
+    background-color: map-get($colors , secondary );
+}
+
+.main__wrap{
+    position: relative;
+    width: 100%;
+}
+// .split-pane{
+//     top: $header-lg-height;
+// }
+.sidenav{
+   background-color: map-get($colors , secondary );
+   .scroll-content{
+        padding: 15px;
+   }
+ .item-block .item-inner{
+         border-color: map-get($colors , accent );
+    }
+    // .item-block{
+    //     &:hover{
+    //         color: map-get($colors , danger );
+    //     }
+    // }
+    // .item-inner{
+    //     margin-left:0 !important;
+    //     text-transform: uppercase;
+        
+    // }
+}
+.menu-content{   
+         @media (min-width: 1200px){
+            // top: $search-lg-height;
+                bottom: 50px;
+                height: auto;
+     }
+}
+.logo{
+    &-wrap{
+        text-align: center;
+        position: relative;
+        overflow: visible;
+    }
+    &-go{
+        position: absolute;
+        right: 0;
+        // top:50%;
+        bottom: 10px;
+        transform: rotate(-20deg);
+    }
+}
+.loader-wrap{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// ======================================================== bs fixes
+ion-col ion-col{
+    padding: 0 !important;
+}
+.row{
+    .row{
+    margin-right: -5px;
+    margin-left: -5px;
+    }
+}
+[shrink]{
+    flex-grow: 0;
+}
+p{
+    margin-top: 0;
+}
+[jc]{
+    @extend [justify-content-center];
+}
+
+
+    .picker-wrapper{
+background-color: white !important;
+    }

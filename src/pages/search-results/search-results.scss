@@ -1,0 +1,32 @@
+.brick{
+     @extend .col;
+    //  @extend .col-12;
+    //   @extend .col-lg-4;
+    //   @extend .col-xl-3;
+    // width: 23%;
+    // flex: 0 0 33%;
+    @media (min-width: map-get($grid-breakpoints, sm)){
+        width: 50%;
+     }
+     @media (min-width: map-get($grid-breakpoints, lg)){
+        width: 33.3333%;
+     }
+     @media (min-width: map-get($grid-breakpoints, xl)){
+        width: 25%;
+     }
+ }
+
+// page-search-results{
+  
+//     .brick{
+//         width: 300px;
+//         display: inline-block;
+//         margin: 0 2px 10px;
+//         ion-card{
+//             width: 100%;
+//         }
+//         &__wrap{
+//   column-count: 4;
+//         }
+//     }
+// }

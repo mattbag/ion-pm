@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar color="primary">
+
+    <ion-toolbar>
+      <ion-title>{{(project | async)?.name}} 😁</ion-title>
+      <ion-buttons end>
+        <ion-chip color="accent">
+          <ion-label>{{(project | async)?.launch | date :'yMMMMd'}}</ion-label>
+          <ion-icon name="calendar" color="danger"></ion-icon>
+        </ion-chip>
+      </ion-buttons>
+    </ion-toolbar>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <!-- {{project_progress | number: '1.0-0'}} -->
+  <!--{{(project | async) | json}}-->
+  <!-- <progress-ionic [progress]="project_progress"></progress-ionic> -->
+  <br>
+<!-- {{(sections | async)?.length}} -->
+  <ion-grid>
+    <ion-row>
+
+      <ion-col col-12 col-lg-6 col-xl-4 *ngFor="let section of sections | async">
+        <ion-card>
+          <ion-card-header>
+            <ion-row align-items-center>
+              <ion-col>
+                  <ion-icon name="{{section.icon}}" class="section-icon"></ion-icon> {{section.label}}
+              </ion-col>
+              <ion-col col-auto text-right>
+                <ion-chip (click)="notify(section.admin)" [color]="section.admin === user ? 'accent' : ''">
+                  <ion-label>{{section.admin | titlecase}}</ion-label>
+                  <ion-avatar>
+                    <img src="http://fillmurray.com/100/100">
+                  </ion-avatar>
+                </ion-chip>
+              </ion-col>
+            </ion-row>
+          </ion-card-header>
+          <ion-card-content>
+            <progress-bar [progress]="section?.progress"></progress-bar>
+
+            <!--{{(section?.tasks | async) | json}}-->
+            <ion-list *ngIf="section?.tasks">
+
+              <ion-item *ngFor="let task of section.tasks | async" class="task-item">
+
+                <span (click)="showInfo(task)">{{task.label}}</span>
+                <button ion-button icon-only clear item-right (click)="showInfo(task)">
+                <ion-icon name="attach" color="danger"></ion-icon>
+              </button>
+
+                <button ion-button icon-only item-left clear (click)="manageTask(task, task.$key, section)">
+                <ion-icon name="thumbs-down" *ngIf="!task.checked"></ion-icon>
+                <ion-icon name="happy" *ngIf="task.checked"></ion-icon>
+                <!--<ion-icon name="hand" *ngIf="!task.done"></ion-icon>-->
+              </button>
+
+              </ion-item>
+
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+
+
+        <br>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,173 @@
+    [
+        {
+            "name": "Performance",
+            "icon": "speedometer",
+            "tasks": [
+                {
+                    "label": "Images Optimized",
+                    "checked": true,
+                    "notes": "Comments will be placed here",
+                    "info": [
+                        {
+                            "title": "info title",
+                            "text": "info text"
+                        },
+                        {
+                            "title": "info title 2",
+                            "text": "info text lorem ipsonefkhwdbvcwdjk dhwbdckwebdwlj"
+                        }
+                    ]
+                },
+                {
+                    "label": "Reduce page weight",
+                    "checked": false,
+                    "notes": "Comments will be placed here",
+                    "info": [
+                        {
+                            "title": "info title",
+                            "text": "info text"
+                        },
+                        {
+                            "title": "info title 2",
+                            "text": "info text lorem ipsonefkhwdbvcwdjk dhwbdckwebdwlj"
+                        }
+                    ]
+                },
+                {
+                    "label": "Images Optimized",
+                    "checked": true,
+                    "notes": "Comments will be placed here",
+                    "info": [
+                        {
+                            "title": "info title",
+                            "text": "info text"
+                        },
+                        {
+                            "title": "info title 2",
+                            "text": "info text lorem ipsonefkhwdbvcwdjk dhwbdckwebdwlj"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "SEO",
+            "icon": "logo-google",
+            "tasks": [
+                {
+                    "label": "Images Optimized",
+                    "checked": true,
+                    "notes": "Comments will be placed here",
+                    "info": [
+                        {
+                            "title": "info title",
+                            "text": "info text"
+                        },
+                        {
+                            "title": "info title 2",
+                            "text": "info text lorem ipsonefkhwdbvcwdjk dhwbdckwebdwlj"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Security",
+            "icon": "warning",
+            "tasks": [
+                {
+                    "label": "Images Optimized",
+                    "checked": true,
+                    "notes": "Comments will be placed here",
+                    "info": [
+                        {
+                            "title": "info title",
+                            "text": "info text"
+                        },
+                        {
+                            "title": "info title 2",
+                            "text": "info text lorem ipsonefkhwdbvcwdjk dhwbdckwebdwlj"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "A11y",
+            "icon": "glasses",
+            "tasks": [
+                {
+                    "label": "Images Optimized",
+                    "checked": true,
+                    "notes": "Comments will be placed here",
+                    "info": [
+                        {
+                            "title": "info title",
+                            "text": "info text"
+                        },
+                        {
+                            "title": "info title 2",
+                            "text": "info text lorem ipsonefkhwdbvcwdjk dhwbdckwebdwlj"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Content",
+            "icon": "book",
+            "tasks": [
+                {
+                    "label": "Images Optimized",
+                    "checked": true,
+                    "notes": "Comments will be placed here",
+                    "info": [
+                        {
+                            "title": "info title",
+                            "text": "info text"
+                        },
+                        {
+                            "title": "info title 2",
+                            "text": "info text lorem ipsonefkhwdbvcwdjk dhwbdckwebdwlj"
+                        }
+                    ]
+                },
+                {
+                    "label": "Images hello",
+                    "checked": false,
+                    "notes": "Comments will be placed here",
+                    "info": [
+                        {
+                            "title": "info title",
+                            "text": "info text"
+                        },
+                        {
+                            "title": "info title 2",
+                            "text": "info text lorem ipsonefkhwdbvcwdjk dhwbdckwebdwlj"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Functionality",
+            "icon": "color-wand",
+            "tasks": [
+                {
+                    "label": "Images Optimized",
+                    "checked": false,
+                    "notes": "Comments will be placed here",
+                    "info": [
+                        {
+                            "title": "info title",
+                            "text": "info text"
+                        },
+                        {
+                            "title": "info title 2",
+                            "text": "info text lorem ipsonefkhwdbvcwdjk dhwbdckwebdwlj"
+                        }
+                    ]
+                }
+            ]
+        }
+        ]

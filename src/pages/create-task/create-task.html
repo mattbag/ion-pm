@@ -1,0 +1,127 @@
+<!--<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Create Project</ion-title>
+    
+     <ion-buttons end>
+      <button ion-button icon-only clear (click)="dismiss()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>-->
+<ion-header color="accent">
+
+  <ion-toolbar>
+    <!--<ion-title>Create Project</ion-title>-->
+
+    <ion-buttons end>
+      <button ion-button icon-only clear (click)="dismiss()">
+      <ion-icon name="close"></ion-icon>
+    </button>
+    </ion-buttons>
+    <ion-segment [(ngModel)]="type" color="primary">
+      <ion-segment-button value="section">
+        section
+        <!--<ion-icon name="camera"></ion-icon>-->
+      </ion-segment-button>
+      <ion-segment-button value="task">
+        task
+        <!--<ion-icon name="bookmark"></ion-icon>-->
+      </ion-segment-button>
+      <ion-segment-button value="user">
+        user
+        <!--<ion-icon name="bookmark"></ion-icon>-->
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <div [ngSwitch]="type">
+    <ion-grid>
+      <ion-row jc>
+      <ion-col col-auto>
+        <ion-icon color="primary" [name]="section_icon" *ngSwitchCase="'section'" style="font-size:50px"></ion-icon>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+    <ion-list *ngSwitchCase="'section'">
+      <ion-item>
+        <ion-label color="primary" floating>Section Name</ion-label>
+        <ion-input [(ngModel)]="section_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Admin</ion-label>
+        <!--<ion-input [(ngModel)]="section_admin"></ion-input>-->
+        <ion-select [(ngModel)]="section_admin">
+          <ion-option [value]="user.name" *ngFor="let user of users | async">{{user.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Icon</ion-label>
+        <ion-select [(ngModel)]="section_icon">
+          <!--<ion-option [value]="icon.$value" *ngFor="let icon of icons | async">{{user.$value}}</ion-option>-->
+          <ion-option value="speedometer">Speedometer</ion-option>
+          <ion-option value="glasses">Glasses</ion-option>
+          <ion-option value="logo-google">Google</ion-option>
+          <ion-option value="settings">Settings</ion-option>
+          <ion-option value="book">Book</ion-option>
+          <ion-option value="nuclear">Nuclear</ion-option>
+          <ion-option value="ionic">Atom</ion-option>
+          <ion-option value="ionitron">Bot</ion-option>
+           <ion-option value="alarm">Alarm</ion-option>
+            <ion-option value="analytics">Analytics</ion-option>
+             <ion-option value="logo-instagram">Instagram</ion-option>
+           <ion-option value="contact">Contact</ion-option>
+            <ion-option value="brush">Brush</ion-option>
+             <ion-option value="umbrella">Umbrella</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <button ion-button full (click)="addSection()" *ngSwitchCase="'section'" [disabled]="!section_name || !section_admin">Add Section</button>
+    
+
+    <ion-list *ngSwitchCase="'task'">
+      <ion-item>
+        <ion-label color="primary" floating>Task Name</ion-label>
+        <ion-input [(ngModel)]="task_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" floating>Section</ion-label>
+        <ion-select [(ngModel)]="task_section">
+          <ion-option [value]="section.$key" *ngFor="let section of section_list | async">{{section.label}}</ion-option>
+
+        </ion-select>
+
+      </ion-item>
+      <ion-item *ngFor="let key of info_array">
+         <ion-icon name="trash" color="danger" item-right (click)="removeInfo(key)"></ion-icon>
+        <ion-label color="primary" floating>Task Info {{key.id}}</ion-label>
+        <ion-input [(ngModel)]="info_array[info_array.indexOf(key)].text"></ion-input>
+       
+      </ion-item>
+      <ion-item>
+         <button ion-button clear (click)="addTaskInfo()"><ion-icon name="add"></ion-icon> Add Task Info</button>
+        </ion-item>
+    </ion-list>
+    <button ion-button full (click)="addTask()" *ngSwitchCase="'task'" [disabled]="!task_name || !task_section">Add Task</button>
+
+    <ion-list *ngSwitchCase="'user'">
+      <ion-item>
+        <ion-label color="primary" floating>User Name</ion-label>
+        <ion-input [(ngModel)]="user_name"(input)="updateEmail()"></ion-input>
+      </ion-item>
+    <ion-item>
+        <ion-label color="primary" floating>User Email</ion-label>
+        <ion-input [(ngModel)]="user_email" type="email" [readonly]="!user_name"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button full (click)="addUser()" *ngSwitchCase="'user'" [disabled]="!user_name || !user_email">Add User</button>
+  </div>
+
+</ion-content>

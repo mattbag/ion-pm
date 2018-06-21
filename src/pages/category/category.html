@@ -1,0 +1,54 @@
+<ion-content padding>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <p>Breadcrumbs</p>
+<h2>Category Name</h2>
+      </ion-col>
+      <ion-col col-lg-4>
+         <ion-item>
+                <ion-label>Sort</ion-label>
+                <ion-select>
+                    <ion-option value="f" selected="true">Business</ion-option>
+                    <ion-option value="m">Sales</ion-option>
+                </ion-select>
+            </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+
+      <ion-col col-12 col-lg-4 col-xl-3 *ngFor="let number of repeater">
+        <ion-card>
+          <ion-card-header>
+            Header {{number}}
+          </ion-card-header>
+          <ion-card-content>
+            The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+            <br> <br> <br>
+            <hr>
+            <ion-list no-lines>
+              <button ion-item>
+                <ion-icon name="leaf" item-left></ion-icon>
+                Herbology
+              </button>
+              <button ion-item>
+                <ion-icon name="beer" item-left></ion-icon>
+                Beers
+              </button>
+              <button ion-item>
+                <ion-icon name="logo-github" item-left></ion-icon>
+                Github
+              </button>
+            </ion-list>
+
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+
+    </ion-row>
+
+
+  </ion-grid>
+</ion-content>

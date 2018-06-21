@@ -1,0 +1,30 @@
+<!-- Generated template for the HeaderLg component -->
+<ion-grid>
+  <ion-row align-items-center>
+    <ion-col shrink *hideItBootstrap="['md','lg','xl']">
+      <button ion-button menuToggle clear>
+      <ion-icon name="menu" color="danger"></ion-icon>
+    </button>
+    </ion-col>
+
+    <ion-col>
+      <img src="assets/img/logo.svg" alt="atlas logo" width="100">
+    </ion-col>
+
+    <ion-col shrink>
+      <div class="profile__avatar" (click)="presentPopover($event)">
+        <ion-icon name="ios-arrow-down" color="light"></ion-icon>
+        <div class="profile__pic">
+
+        <img src="http://fillmurray.com/g/100/100" alt="">
+        <div class="profile__notifications">
+          99
+        </div>
+
+         </div>
+
+      </div>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>

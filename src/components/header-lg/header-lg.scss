@@ -1,0 +1,42 @@
+header-lg {
+    height: $header-lg-height;
+    // padding: $header-lg-pad;
+    align-items: center;
+    display: flex;
+    background-color: map-get($colors , primary );
+    right: 0;
+    position: fixed;
+    left: 0;
+    border-bottom: 1px solid white;
+}
+.profile{
+    $margin: 5px;
+    &__avatar{
+        display: flex;
+        align-items: center;
+            width: 60px + $margin;
+            // height: 50px;
+            img{
+                margin-left: $margin;
+                width: 50px;
+                border-radius: 50%;
+            }
+    }
+    &__pic{
+        position: relative
+    }
+    &__notifications{
+        height: 20px;
+        width: 20px;
+        background-color: map-get($colors , danger );
+        color: map-get($colors , light );
+        border-radius: 50%;
+        position: absolute;
+        top:0;
+        left:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+}

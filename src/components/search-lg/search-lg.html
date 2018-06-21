@@ -1,0 +1,37 @@
+<ion-grid>
+    <ion-row align-items-center>
+        <ion-col col-12 col-md-4 col-lg-3>
+            <ion-searchbar (ionInput)="getItems(search_terms)" [(ngModel)]="search_terms"></ion-searchbar>
+        </ion-col>
+        <ion-col>
+            <ion-item>
+                <ion-label>Category</ion-label>
+                <ion-select [(ngModel)]="gender">
+                    <ion-option value="f" selected="true">Business</ion-option>
+                    <ion-option value="m">Sales</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-col>
+         <ion-col>
+            <ion-item>
+                <ion-label>Document Type</ion-label>
+                <ion-select [(ngModel)]="gender">
+                    <ion-option value="f" selected="true">Text</ion-option>
+                    <ion-option value="m">PDF</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-col>
+         <ion-col>
+            <ion-item>
+                <ion-label>Modified Date</ion-label>
+                <ion-select [(ngModel)]="gender">
+                    <ion-option value="f" selected="true">Female</ion-option>
+                    <ion-option value="m">Male</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-col>
+        <ion-col>
+            <button color="secondary" ion-button full class="search__btn" (click)="getItems(search_terms)">search</button>
+        </ion-col>
+    </ion-row>
+</ion-grid>

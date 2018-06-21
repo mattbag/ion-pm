@@ -1,0 +1,11 @@
+page-project {
+    .task-item {
+        padding-left: 0;
+        .item-inner {
+            padding-right: 0 !important;
+        }
+    }
+    .section-icon {
+        transform:translateY(2px);
+    }
+}

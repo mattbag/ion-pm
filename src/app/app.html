@@ -1,0 +1,63 @@
+<ion-split-pane when="md">
+  <!--  our side menu  -->
+  <ion-menu [content]="content">
+    <ion-content class="sidenav">
+
+      <div class="logo-wrap">
+        <img src="assets/img/logo.svg" alt="atlas logo" width="90%">
+        <img src="assets/img/logo-go.svg" alt="atlas logo go" width="50" class="logo-go">
+        <br><br>
+      </div>
+
+
+      <ion-list>
+
+        <button ion-item *ngFor="let project of projects | async" (click)="openPage(project)">
+                    <ion-icon name="md-arrow-dropright" item-left></ion-icon>
+                {{project.name}}
+                </button>
+
+      </ion-list>
+      <hr style="background-color: white">
+      <ion-list>
+
+        <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+                    <ion-icon [name]="p.icon" item-left></ion-icon>
+                {{p.title}}
+                </button>
+
+
+
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+
+  <ion-nav [root]="rootPage" main #content></ion-nav>
+
+  <ion-fab bottom right>
+    <button ion-fab> <ion-icon name="menu" color="accent"></ion-icon></button>
+    <ion-fab-list side="top">
+      <!--<button ion-fab (click)="changeProgress(44)" color="accent">44%</button>-->
+      <button ion-fab (click)="newProject()" color="accent"><ion-icon name="add"></ion-icon></button>
+      <button ion-fab (click)="create()" color="accent"> <ion-icon name="md-list-box"></ion-icon></button>
+      <button ion-fab color="accent">
+        <ion-chip>
+    <ion-avatar>
+      <img src="http://fillmurray.com/100/100">
+    </ion-avatar>
+     </ion-chip>
+    </button>
+    </ion-fab-list>
+    <ion-fab-list side="left">
+      <button ion-fab menuToggle color="secondary">
+      <ion-icon name="ios-albums" color="danger"></ion-icon>
+    </button>
+
+      <button ion-fab color="secondary">
+      <ion-icon name="color-palette"></ion-icon>
+    </button>
+
+    </ion-fab-list>
+  </ion-fab>
+</ion-split-pane>

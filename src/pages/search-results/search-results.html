@@ -1,0 +1,69 @@
+<ion-content padding>
+
+<masonry [options]="{ gutter: 0, transitionDuration: '0.3s',
+percentPosition: true,
+columnWidth: '.brick'
+  }">
+       <masonry-brick class="brick" *ngFor="let card of searchResultsArray">
+         
+           <ion-card (click)="openPage($event)">
+          <ion-card-header *ngIf="card.title">
+           {{card?.title}}
+          </ion-card-header>
+          <ion-card-content  *ngIf="card.excerpt">
+           {{card?.excerpt}}
+           <div *ngIf="card?.hasBtns">
+            <br> <br> <br>
+            <hr>
+            <ion-list no-lines>
+              <button ion-item (click)="clickCheck($event)">
+                <ion-icon name="leaf" item-left></ion-icon>
+                Herbology
+              </button>
+              <button ion-item>
+                <ion-icon name="beer" item-left></ion-icon>
+                Beers
+              </button>
+              <button ion-item>
+                <ion-icon name="logo-github" item-left></ion-icon>
+                Github
+              </button>
+            </ion-list>
+            </div>
+          </ion-card-content>
+        </ion-card>
+         </masonry-brick>
+</masonry>
+<!--<div class="brick__wrap">
+
+
+ <div class="brick" *ngFor="let card of searchResultsArray">
+           <ion-card (click)="openPage($event)">
+          <ion-card-header *ngIf="card.title">
+           {{card?.title}}
+          </ion-card-header>
+          <ion-card-content  *ngIf="card.excerpt">
+           {{card?.excerpt}}
+           <div *ngIf="card?.hasBtns">
+            <br> <br> <br>
+            <hr>
+            <ion-list no-lines>
+              <button ion-item (click)="clickCheck($event)">
+                <ion-icon name="leaf" item-left></ion-icon>
+                Herbology
+              </button>
+              <button ion-item>
+                <ion-icon name="beer" item-left></ion-icon>
+                Beers
+              </button>
+              <button ion-item>
+                <ion-icon name="logo-github" item-left></ion-icon>
+                Github
+              </button>
+            </ion-list>
+            </div>
+          </ion-card-content>
+        </ion-card>
+         </div>
+</div>-->
+</ion-content>

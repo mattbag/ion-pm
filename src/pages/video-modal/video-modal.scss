@@ -1,0 +1,44 @@
+page-video-modal {
+   [class^="content"]{
+         
+          @media (min-width: 1200px){
+           background-color: transparent
+     }
+     }
+    .embed-responsive{
+       
+        position: relative;
+        display: block;
+        height: 0;
+        padding: 0;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        
+      
+         @media (min-width: 1200px){
+            box-shadow: 0 2px 20px $modal-inset-box-shadow-color;
+             width: 98%;
+     }
+        &-iframe{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    }
+    .scroll-content{
+        @media (min-width: 1200px){
+          display: flex;
+        align-items: center;
+        justify-content: center
+     }
+        
+    }
+
+}
+.modal-wrapper{
+     box-shadow: none !important;
+}
